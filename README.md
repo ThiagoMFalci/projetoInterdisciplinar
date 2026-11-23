@@ -5,11 +5,16 @@ PH Lingerie é um projeto interdisciplinar de desenvolvimento web que consiste e
 
 ## Integrantes do Grupo
 
-O projeto foi desenvolvido por Thiago Mendonça Falci, Pedro Henrique Mesquita e Víctor Sturaro Figueiredo Bueno Quirino.
+Thiago Mendonça Falci
+Pedro Henrique Mesquita
+Víctor Sturaro Figueiredo Bueno Quirino.
 
 ## Tecnologias Utilizadas
 
-O projeto foi desenvolvido inteiramente com PHP 8.3 no back-end, responsável pela renderização dinâmica das páginas, filtragem e ordenação dos produtos e geração automática dos links do WhatsApp. A estrutura das páginas foi construída com HTML5 semântico, a estilização com CSS3 utilizando variáveis customizadas, Grid e Flexbox para layout responsivo, e toda a interatividade do front-end com JavaScript puro (Vanilla JS), sem dependência de frameworks externos. O mapa do ateliê é embutido via Google Maps Embed, e as fontes utilizadas são Cormorant Garamond (títulos) e Plus Jakarta Sans (interface), ambas do Google Fonts.
+PHP 8.3
+HTML5 
+CSS3
+JavaScript
 
 ## Requisitos e Dependências
 
@@ -30,8 +35,4 @@ A página de cada produto conta com galeria de fotos com zoom interativo ao pass
 A página do ateliê apresenta a filosofia da marca, endereço e horários de funcionamento, mapa interativo via Google Maps, canais de contato (WhatsApp, e-mail e Instagram) e formulário de agendamento de visitas.
 
 O design do site é minimalista e 100% responsivo, com paleta de cores neutra e quente, tipografia refinada, header fixo com menu hambúrguer animado para mobile e amplo uso de espaço em branco para leitura confortável.
-
-## Estrutura de Arquivos
-
-A raiz do projeto fica em `Projeto/htdocs/`. Os arquivos principais de páginas são `index.php` (home), `categoria.php` (catálogo com filtros), `produto.php` (detalhes do produto) e `atelie.php` (página do ateliê). Os estilos estão organizados em `assets/css/` nos arquivos `variables.css`, `global.css`, `components.css` e `product.css`. Os scripts JavaScript estão em `assets/js/` nos arquivos `main.js`, `gallery.js` e `size-guide.js`. As configurações globais e funções auxiliares ficam em `config/config.php`, o catálogo de produtos em `data/products.php`, os componentes reutilizáveis de cabeçalho, rodapé e cards em `includes/`, e as imagens dos produtos em `Images/`.
 
