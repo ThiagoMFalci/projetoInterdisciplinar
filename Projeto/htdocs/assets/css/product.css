@@ -1,0 +1,443 @@
+/**
+ * AURA Lingerie - Estilos da Página do Produto (PDP)
+ * Layout em 2 colunas com Galeria de Alta Resolução e Acordeões Técnicos
+ */
+
+.pdp-section {
+  padding: var(--space-2xl) 0 var(--space-4xl);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumb-sep {
+  opacity: 0.5;
+}
+
+.pdp-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+/* ==========================================================================
+   1. GALERIA DE FOTOS COM ZOOM
+   ========================================================================== */
+.pdp-gallery {
+  display: flex;
+  gap: var(--space-md);
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+
+.gallery-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 78px;
+  flex-shrink: 0;
+}
+
+.thumb-item {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  background-color: var(--color-surface-subtle);
+  transition: border-color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-item:hover,
+.thumb-item.active {
+  border-color: var(--color-text-primary);
+}
+
+.gallery-main {
+  flex: 1;
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  background-color: var(--color-surface-subtle);
+  cursor: zoom-in;
+}
+
+.gallery-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-out;
+}
+
+.zoom-hint {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  padding: 6px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: var(--radius-xs);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   2. COLUNA DE INFORMAÇÕES E COMPRA
+   ========================================================================== */
+.pdp-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdp-badge-wrap {
+  margin-bottom: var(--space-xs);
+}
+
+.pdp-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: var(--space-xs);
+}
+
+.pdp-rating-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.stars-gold {
+  color: #D4A373;
+  letter-spacing: 2px;
+}
+
+.pdp-price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pdp-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.pdp-old-price {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.pdp-installments {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.pdp-short-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+/* Seletores de Cor */
+.variant-block {
+  margin-bottom: var(--space-lg);
+}
+
+.variant-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.variant-value {
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  text-transform: none;
+}
+
+.color-swatches-list {
+  display: flex;
+  gap: 12px;
+}
+
+.color-swatch-option {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-fast);
+}
+
+.color-swatch-option:hover {
+  transform: scale(1.1);
+}
+
+.color-swatch-option.active::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 1.5px solid var(--color-text-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Seletores de Tamanho */
+.size-guide-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.size-options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.size-btn {
+  min-width: 65px;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xs);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.size-btn:hover {
+  border-color: var(--color-text-primary);
+}
+
+.size-btn.active {
+  background-color: var(--color-text-primary);
+  color: var(--color-text-light);
+  border-color: var(--color-text-primary);
+}
+
+/* Linha de Ação Principal (Quantidade + Botão Comprar) */
+.pdp-actions-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.pdp-qty-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-surface);
+  height: 52px;
+}
+
+.pdp-qty-stepper button {
+  width: 36px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+.pdp-qty-stepper input {
+  flex: 1;
+  width: 38px;
+  border: none;
+  background: none;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  outline: none;
+}
+
+.pdp-add-btn {
+  height: 52px;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+}
+
+/* Simulador de Frete */
+.shipping-calc-box {
+  background-color: var(--color-surface-subtle);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-xs);
+  margin-bottom: var(--space-xl);
+}
+
+.shipping-calc-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shipping-calc-form {
+  display: flex;
+  gap: 8px;
+}
+
+.shipping-calc-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-surface);
+  font-size: 0.85rem;
+}
+
+.shipping-result {
+  margin-top: var(--space-sm);
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  display: none;
+}
+
+/* ==========================================================================
+   3. ACORDEÕES DE ESPECIFICAÇÃO TÉCNICA
+   ========================================================================== */
+.pdp-accordions {
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: var(--space-md) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion-icon {
+  font-size: 1.1rem;
+  transition: transform var(--transition-fast);
+}
+
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.accordion-content {
+  padding-bottom: var(--space-lg);
+}
+
+.spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.spec-label {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Responsividade da PDP */
+@media (max-width: 992px) {
+  .pdp-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  .pdp-gallery {
+    position: static;
+  }
+}
+
+@media (max-width: 576px) {
+  .pdp-gallery {
+    flex-direction: column-reverse;
+  }
+  .gallery-thumbs {
+    flex-direction: row;
+    width: 100%;
+  }
+  .thumb-item {
+    width: 60px;
+  }
+  .pdp-actions-row {
+    grid-template-columns: 90px 1fr;
+  }
+}

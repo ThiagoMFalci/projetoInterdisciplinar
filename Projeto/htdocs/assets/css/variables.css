@@ -1,0 +1,64 @@
+/**
+ * AURA Lingerie - Design System Tokens & Variables
+ * Estética Minimalista, Editorial e Alta Legibilidade
+ */
+
+:root {
+  /* Paleta de Cores Principais */
+  --color-bg: #FAF8F5;              /* Off-white quente e acolhedor */
+  --color-surface: #FFFFFF;         /* Branco puro para cards e modais */
+  --color-surface-subtle: #F3EFEA;  /* Fundo sutil para divisões e badges */
+  --color-border: #E8E2D8;          /* Linha de borda sutil e elegante */
+  --color-border-dark: #D4CABE;     /* Borda com maior contraste */
+
+  /* Tipografia & Contraste */
+  --color-text-primary: #181716;    /* Preto suave carvão para máxima legibilidade */
+  --color-text-secondary: #5C5852;  /* Cinza quente médio para descrições */
+  --color-text-muted: #8A857D;      /* Texto de apoio e legendas */
+  --color-text-light: #FFFFFF;      /* Texto para fundos escuros */
+
+  /* Cores de Acento e Toques Nobres */
+  --color-accent: #9B7850;          /* Dourado / Areia suave de luxo */
+  --color-accent-hover: #7D5F3D;    /* Dourado escurecido para hover */
+  --color-accent-subtle: #F4ECE1;   /* Dourado clarinho para highlights */
+  --color-discount: #853737;        /* Vinho refinado para descontos (evitando vermelho berrante) */
+  --color-success: #2C6B4F;         /* Verde botânico sofisticado para estoque e frete grátis */
+
+  /* Tipografia */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Escala de Espaçamento */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Larguras Máximas de Layout */
+  --container-max: 1320px;
+  --container-narrow: 1040px;
+  --header-height: 80px;
+  --topbar-height: 38px;
+
+  /* Sombras Sutis e Delicadas */
+  --shadow-sm: 0 2px 8px rgba(24, 23, 22, 0.04);
+  --shadow-md: 0 8px 24px rgba(24, 23, 22, 0.07);
+  --shadow-lg: 0 16px 40px rgba(24, 23, 22, 0.10);
+  --shadow-drawer: -4px 0 30px rgba(24, 23, 22, 0.12);
+
+  /* Curvaturas de Borda */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 9999px;
+
+  /* Transições Suaves */
+  --transition-fast: 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-normal: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
