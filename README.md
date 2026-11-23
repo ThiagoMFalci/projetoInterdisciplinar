@@ -5,9 +5,9 @@ PH Lingerie é um projeto interdisciplinar de desenvolvimento web que consiste e
 
 ## Integrantes do Grupo
 
-Thiago Mendonça Falci
-Pedro Henrique Mesquita
-Víctor Sturaro Figueiredo Bueno Quirino.
+- Thiago Mendonça Falci,
+- Pedro Henrique Mesquita,
+- Víctor Sturaro Figueiredo Bueno Quirino.
 
 ## Tecnologias Utilizadas
 
